@@ -1,3 +1,5 @@
+// launchguard/src/router.tsx
+
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Dashboard from "./pages/Dashboard";
@@ -10,18 +12,9 @@ export const router = createBrowserRouter(
       path: "/",
       element: <Layout />,
       children: [
-        {
-          index: true,
-          element: <Dashboard />,
-        },
-        {
-          path: "projects",
-          element: <Projects />,
-        },
-        {
-          path: "settings",
-          element: <Settings />,
-        },
+        { index: true, element: <Dashboard /> },
+        { path: "projects", element: <Projects /> },
+        { path: "settings", element: <Settings /> },
       ],
     },
   ],
